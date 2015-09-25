@@ -1584,6 +1584,8 @@ class RcptCd(CalAccessBaseModel):
 
         Form 401 (Slate Mailer Organization Campaign Statement) Schedule A.
     """
+    UNIQUE KEY = ['FILING_ID', 'AMEND_ID', 'LINE_ITEM', 'REC_ITEM', 'FORM_TYPE']
+    
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
